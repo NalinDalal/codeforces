@@ -1,4 +1,10 @@
-/* A. Team
+/*
+
+800 - Rating
+
+link: https://codeforces.com/problemset/problem/231/A
+
+A. Team
 time limit per test2 seconds
 memory limit per test256 megabytes
 

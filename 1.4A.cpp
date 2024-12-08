@@ -1,6 +1,8 @@
 /*
 link: https://codeforces.com/problemset/problem/4/A
 
+800 - Rating
+
 A. Watermelon
 time limit per test1 second
 memory limit per test64 megabytes

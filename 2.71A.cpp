@@ -1,5 +1,7 @@
 /*
 link: https://codeforces.com/problemset/problem/71/A
+800 - Rating
+
 
 
 * A. Way Too Long Words

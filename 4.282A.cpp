@@ -1,4 +1,9 @@
-/* A. Bit++
+/*A. Bit++
+
+800 - Rating
+
+link: https://codeforces.com/problemset/problem/282/A
+
 time limit per test1 second
 memory limit per test256 megabytes
 The classic programming language of Bitland is Bit++. This language is so

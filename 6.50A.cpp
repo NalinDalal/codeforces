@@ -1,4 +1,8 @@
-/* A. Domino piling
+/*
+link: https://codeforces.com/problemset/problem/50/A
+800 - rating
+
+A. Domino piling
 time limit per test2 seconds
 memory limit per test256 megabytes
 

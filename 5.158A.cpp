@@ -1,4 +1,8 @@
-/* A. Next Round
+/*
+link- https://codeforces.com/problemset/problem/158/A
+800 - rating
+
+A. Next Round
 time limit per test3 seconds
 memory limit per test256 megabytes
 
