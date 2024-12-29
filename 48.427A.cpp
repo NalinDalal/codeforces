@@ -85,3 +85,5 @@ int main() {
   cout << untreatedCrimes << endl;
   return 0;
 }
+
+// https://codeforces.com/problemset/submission/427/298936242
