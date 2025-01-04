@@ -94,3 +94,35 @@ cells of the region, ensuring that all the cells in between are filled
 automatically due to the neighbor cells.
 3. Skip cells when a new sequence of empty cells starts, as they are handled in
 the previous step.*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+  int t;
+  cin >> t;
+  while (t--) {
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    bool flag = false;
+    for (int i = 0; i + 2 < n; i++) {
+      if (s[i] == '.' && s[i + 1] == '.' && s[i + 2] == '.') {
+        flag = true;
+        break;
+      }
+    }
+    if (flag == true) {
+      cout << 2 << endl;
+    } else {
+      int count = 0;
+      for (int i = 0; i < n; i++) {
+        if (s[i] == '.')
+          count++;
+      }
+      cout << count << endl;
+    }
+  }
+  return 0;
+}
