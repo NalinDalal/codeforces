@@ -51,33 +51,16 @@ OutputCopy
 3
 
 */
+#include <cstdio>
 
-#include <iostream>
-using namespace std;
-int gcd(int a, int b) {
-  while (b) {
-    int temp = b;
-    b = a % b;
-    a = temp;
-  }
-  return a;
-}
 int main() {
-  int t;
-  cin >> t;
+
+  long t;
+  scanf("%ld", &t);
   while (t--) {
-    int x;
-    cin >> x;
-    // find y such that gcd(x,y)+y is maximum
-    int maxVal = 0;
-    for (int y = 1; y <= x; ++y) {
-      int g = gcd(x, y);
-      int val = g + y;
-      if (val > maxVal)
-        maxVal = val;
-    }
-    cout << maxVal << endl;
+    long x;
+    scanf("%ld", &x);
+    printf("%ld\n", x - 1);
   }
-  return 0;
 }
-// sub: https://codeforces.com/problemset/submission/1968/316456484
+// sub: https://codeforces.com/problemset/submission/1968/316456599
