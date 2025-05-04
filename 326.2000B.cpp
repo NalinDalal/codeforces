@@ -89,7 +89,7 @@ int main() {
     cin >> x;
     int left = x - 1, right = x + 1;
     bool rule = true;
-    for (int i = 0; i < n; i++) {
+    for (int i = 1; i < n; i++) {
       cin >> x;
       if (x == left) {
         --left;
@@ -104,4 +104,4 @@ int main() {
   }
   return 0;
 }
-// sub: https://codeforces.com/problemset/submission/2000/318309943
+// sub: https://codeforces.com/problemset/submission/2000/318310184
