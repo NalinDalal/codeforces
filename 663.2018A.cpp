@@ -101,21 +101,62 @@ In the second test case, you can buy two cards with the number 1
 , so the answer is 3
 .
 */
+#include <bits/stdc++.h>
+using namespace std;
 
-#include <iostream>
+bool check(int d, long long sum, long long mx, long long k) {
+  // Check if deck size d is possible
+  long long target = mx * d;
+  long long present = sum;
 
-int main() {
-  long t;
-  std::cin >> t;
-
-  while (t--) {
-    long n;
-    std::cin >> n;
-
-    long long ans = 1 + (static_cast<long long>(n) * n) / 4;
-    std::cout << ans << "\n";
+  long long low = 0, high = 1e12, best = high;
+  while (low <= high) {
+    long long mid = (low + high) / 2;
+    if (target + d * mid >= present) {
+      best = min(best, mid);
+      high = mid - 1;
+    } else {
+      low = mid + 1;
+    }
   }
 
+  target += best * d;
+  k -= (target - present);
+  return k >= 0;
+}
+
+void solve() {
+  int n;
+  long long k;
+  cin >> n >> k;
+
+  vector<long long> a(n);
+  long long sum = 0, mx = 0;
+
+  for (int i = 0; i < n; i++) {
+    long long x;
+    cin >> x;
+    sum += x;
+    mx = max(mx, x);
+  }
+
+  int ans = 0;
+  for (int d = 1; d <= n; d++) {
+    if (check(d, sum, mx, k))
+      ans = d;
+  }
+  cout << ans << "\n";
+}
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t;
+  cin >> t;
+  while (t--)
+    solve();
   return 0;
 }
-// sub: https://codeforces.com/problemset/submission/2018/337091567
+
+// sub: https://codeforces.com/problemset/submission/2018/337092747
